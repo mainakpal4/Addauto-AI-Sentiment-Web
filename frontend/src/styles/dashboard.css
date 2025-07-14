@@ -1,0 +1,134 @@
+
+/* frontend/src/styles/dashboard.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #000000, #0f0f0f);
+  overflow: hidden;
+}
+
+.dashboard-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.1), rgba(0,0,0,1));
+  animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dashboard-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.dashboard-title {
+  color: #00ffff;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mode-toggle button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 8px 16px;
+  margin: 0 8px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mode-toggle button.active,
+.mode-toggle button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  resize: none;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.input-section input[type="file"] {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-section button {
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 24px;
+  background: #00ffff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+.input-section button:hover {
+  background: #00dddd;
+}
+
+.camera-section .webcam-preview {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.captured-preview {
+  width: 100%;
+  max-width: 320px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}

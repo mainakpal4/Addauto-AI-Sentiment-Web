@@ -1,0 +1,115 @@
+.login-page {
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #340939, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 40px 50px;
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #6a19a9;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+.login-form input::placeholder {
+  color: #ccc;
+}
+.login-form input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px cyan;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #331b53;
+}
+
+.login-button {
+  padding: 12px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px cyan;
+  transition: all 0.3s ease;
+}
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+.highlight-link {
+  color: #00ffff;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.highlight-link:hover {
+  text-decoration: underline;
+}
+
+.go-back button {
+  margin-top: 18px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background: #00f2fe;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.go-back button:hover {
+  background: #4facfe;
+  transform: scale(1.05);
+}

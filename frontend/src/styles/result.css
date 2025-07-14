@@ -1,0 +1,182 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body style */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #3c1253;
+  color: #48175f;
+  overflow-x: hidden;
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: all 1s ease-in-out;
+}
+
+/* Main container now scrollable globally */
+.page-container {
+  min-height: 100vh;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: background 1s ease;
+}
+
+.page-container.light {
+  background: linear-gradient(135deg, #f0f9ff, #d7ecff);
+  color: #000;
+}
+
+/* Dashboard wrapper */
+.dashboard-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card box */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 35px 40px;
+  width: 92%;
+  max-width: 800px;
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 1.2s ease-in-out;
+  overflow: visible; /* ✅ No internal scroll */
+}
+
+/* Light mode adjustments */
+.dashboard-card.light {
+  background: rgba(0, 0, 0, 0.03);
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+.dashboard-card h2 {
+  font-size: 28px;
+  color: #00f5ff;
+}
+
+h3 {
+  font-size: 20px;
+  color: #f5a623;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 22px;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.dashboard-card.light p,
+.dashboard-card.light h3 {
+  color: #333;
+}
+
+/* Form and inputs */
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: #00f5ff;
+}
+
+button {
+  background: #00f5ff;
+  border: none;
+  color: #111;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c8d6;
+}
+
+/* Chart styling */
+.chart-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  max-width: 520px !important;
+}
+
+/* Table */
+.top-emotions-table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+}
+
+.top-emotions-table th,
+.top-emotions-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.top-emotions-table th {
+  background-color: #111;
+  color: #00f5ff;
+}
+
+.top-emotions-table td {
+  background-color: #222;
+  color: #fff;
+}
+
+.top-emotions-table tr:hover {
+  background-color: #2f3f4b;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .dashboard-card {
+    padding: 25px 20px;
+  }
+}

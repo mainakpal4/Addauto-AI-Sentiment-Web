@@ -1,0 +1,149 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.4s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid cyan;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: cyan;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: cyan;
+  color: #000;
+}
+
+.form-container {
+  width: 400px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: cyan;
+  text-shadow: 0 0 5px #0ff;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px cyan;
+}
+
+.register-button {
+  padding: 12px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px cyan;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+.form-footer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.form-footer a {
+  color: cyan;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: salmon;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Light Mode */
+.register-container.light {
+  background: #f0f0f0;
+}
+
+.register-container.light .form-container {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.register-container.light input {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+.register-container.light input::placeholder {
+  color: #333;
+}
+
+.register-container.light .register-button {
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: #000;
+}
+
+.register-container.light .theme-toggle {
+  border-color: #000;
+  color: #000;
+}
