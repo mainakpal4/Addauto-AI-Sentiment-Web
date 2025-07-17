@@ -21,7 +21,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",         # React dev server
         "http://localhost:8000",         # Backend dev serving React
-        "https://your-frontend-domain.com"  # 🔁 Replace with actual frontend domain
+        "https://sentiverse-qqzz.vercel.app"  # 🔁 Replace with actual frontend domain
     ],
     allow_credentials=True,
     allow_methods=["*"],

@@ -20,10 +20,17 @@ async def analyze_voice(audio: UploadFile):
         content = await audio.read()
         f.write(content)
 
+    # # Convert to .wav using FFmpeg
+    # ffmpeg_cmd = [
+    #     "ffmpeg", "-y", "-i", webm_path,
+    #     "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", wav_path
+    # ]
+
     # Convert to .wav using FFmpeg
     ffmpeg_cmd = [
-        "ffmpeg", "-y", "-i", webm_path,
-        "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", wav_path
+        r"D:\ffmpeg\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe",  # full path to ffmpeg.exe
+        "-y", "-i", webm_path,
+        "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le",wav_path
     ]
     subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
