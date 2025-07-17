@@ -12,5 +12,4 @@ This is the backend for **SENTIVERSE**, a full-stack sentiment analysis platform
 
 For testing via Ngrok:
 MODEL_API_URL=https://8a3a-34-9-234-124.ngrok-free.app/analyze/
-For production (once deployed to Railway or other cloud):
-MODEL_API_URL = https://your-railway-url.up.railway.app/analyze/
+
